@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- =============================================
+       SEO META TAGS
+       ============================================= -->
+  <title>Khushi Kushwaha | B.Tech CSE Student &amp; Aspiring Software Developer</title>
+  <meta name="description" content="Portfolio of Khushi Kushwaha — B.Tech Computer Science Engineering student and aspiring Software Developer. Explore my projects, skills, and experience." />
+  <meta name="keywords" content="Khushi Kushwaha, portfolio, software developer, B.Tech CSE, web development, JavaScript, React, full stack" />
+  <meta name="author" content="Khushi Kushwaha" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Khushi Kushwaha | B.Tech CSE Student & Aspiring Software Developer" />
+  <meta property="og:description" content="Portfolio of Khushi Kushwaha — B.Tech CSE student passionate about software development, web development, and problem solving." />
+  <meta property="og:image" content="./assets/profile.jpg" />
+  <!-- REPLACE: Update og:url with your actual deployed URL -->
+  <meta property="og:url" content="https://khushikushwaha.vercel.app" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Khushi Kushwaha | Software Developer Portfolio" />
+  <meta name="twitter:description" content="B.Tech CSE Student | Aspiring Software Developer" />
+  <meta name="twitter:image" content="./assets/profile.jpg" />
+
+  <!-- Favicon placeholder — replace with your own favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="dark-theme">
+
+  <!-- =============================================
+       FLOATING BACKGROUND ELEMENTS
+       ============================================= -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- =============================================
+       NAVIGATION
+       ============================================= -->
+  <header class="navbar" id="navbar" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+
+      <a href="#home" class="nav-logo" aria-label="Khushi Kushwaha home">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">KK</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#home"          class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about"         class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills"        class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects"      class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#experience"    class="nav-link" data-section="experience">Journey</a></li>
+        <li><a href="#achievements"  class="nav-link" data-section="achievements">Achievements</a></li>
+        <li><a href="#github"        class="nav-link" data-section="github">GitHub</a></li>
+        <li><a href="#contact"       class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Theme toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <span class="theme-icon" id="themeIcon">🌙</span>
+        </button>
+
+        <!-- Mobile hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- =============================================
+         HERO SECTION
+         ============================================= -->
+    <section class="hero" id="home" aria-label="Introduction">
+      <div class="container hero-grid">
+
+        <!-- Left — text -->
+        <div class="hero-content">
+          <p class="hero-greeting reveal">Hi there, I'm</p>
+          <h1 class="hero-name reveal">
+            Khushi <span class="accent">Kushwaha</span>
+            <span class="wave" aria-hidden="true">👋</span>
+          </h1>
+
+          <!-- Typing animation container -->
+          <div class="hero-roles reveal" aria-label="Roles">
+            <span class="role-prefix">I'm a </span>
+            <span class="typed-text" id="typedText" aria-live="polite"></span>
+            <span class="cursor" aria-hidden="true">|</span>
+          </div>
+
+          <p class="hero-bio reveal">
+            I build clean, responsive and user-focused web applications while continuously
+            strengthening my skills in software development, problem solving and computer
+            science fundamentals.
+          </p>
+
+          <div class="hero-cta reveal">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Projects</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <!-- =============================================
+                 RESUME BUTTON — HERO SECTION
+                 Place your resume PDF at: assets/resume.pdf
+                 The file opens in a new browser tab.
+                 ============================================= -->
+            <a href="./assets/resume.pdf"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-secondary"
+               aria-label="Open Resume PDF in a new tab">
+              <span>Download Resume</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-outline">Let's Connect</a>
+          </div>
+
+          <!-- Social quick links -->
+          <div class="hero-socials reveal">
+            <!-- REPLACE: Update href with your GitHub URL -->
+            <a href="https://github.com/kushwahaKhushi" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            </a>
+            <!-- REPLACE: Update href with your LinkedIn URL -->
+            <a href="https://www.linkedin.com/in/khushi-kushwaha" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <!-- REPLACE: Update href with your email -->
+            <a href="mailto:kushwahakhushi0512@gmail.com" class="social-icon" aria-label="Send Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right — animated developer visual -->
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="code-window">
+            <div class="window-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="window-title">khushi.js</span>
+            </div>
+            <div class="window-body">
+              <pre class="code-block"><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-key">name</span>: <span class="code-string">"Khushi Kushwaha"</span>,
+  <span class="code-key">role</span>: <span class="code-string">"Software Developer"</span>,
+  <span class="code-key">education</span>: <span class="code-string">"B.Tech CSE"</span>,
+  <span class="code-key">skills</span>: [
+    <span class="code-string">"C++"</span>, <span class="code-string">"Java"</span>,
+    <span class="code-string">"JavaScript"</span>, <span class="code-string">"React"</span>
+  ],
+  <span class="code-key">passion</span>: <span class="code-string">"Building great software"</span>,
+  <span class="code-key">status</span>: <span class="code-string">"Open to opportunities"</span>,
+
+  <span class="code-key">greet</span>() {
+    <span class="code-keyword">return</span> <span class="code-string">`Hello, World! 👋`</span>;
+  }
+};
+
+<span class="code-comment">// Currently building cool things...</span>
+<span class="code-var">developer</span>.<span class="code-fn">greet</span>();</code></pre>
+            </div>
+          </div>
+
+          <!-- Profile photo — overlapping the bottom-right of the code window -->
+          <div class="profile-photo-wrapper">
+            <img
+              src="./assets/profile.jpg"
+              alt="Khushi Kushwaha"
+              class="profile-photo"
+              loading="eager"
+              draggable="false"
+            />
+            <div class="profile-photo-glow" aria-hidden="true"></div>
+          </div>
+
+          <!-- Floating badges -->
+          <div class="float-badge badge-1">⚡ JavaScript</div>
+          <div class="float-badge badge-2">☕ Java</div>
+          <div class="float-badge badge-3">🔷 C++</div>
+          <div class="float-badge badge-4">⚛️ React</div>
+        </div>
+
+      </div>
+
+      <!-- Scroll indicator -->
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+        <div class="scroll-mouse">
+          <div class="scroll-dot"></div>
+        </div>
+        <span>Scroll Down</span>
+      </a>
+    </section>
+
+    <!-- =============================================
+         ABOUT SECTION
+         ============================================= -->
+    <section class="about section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title" id="about-heading">Who I Am</h2>
+          <p class="section-subtitle">A passionate developer on a continuous learning journey</p>
+        </div>
+
+        <div class="about-grid">
+
+          <!-- Left — image & highlights -->
+          <div class="about-left reveal">
+            <div class="about-image-wrapper">
+              <!-- REPLACE: Update src with your actual profile image path -->
+              <img
+                src="./assets/profile.jpg"
+                alt="Khushi Kushwaha — B.Tech CSE Student"
+                class="about-image"
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <!-- Fallback avatar shown if image is missing -->
+              <div class="about-avatar-fallback" style="display:none;" aria-hidden="true">
+                <span>KK</span>
+              </div>
+              <div class="about-image-glow" aria-hidden="true"></div>
+            </div>
+
+            <div class="about-highlights">
+              <div class="highlight-card">
+                <span class="highlight-icon">🎓</span>
+                <div>
+                  <strong>B.Tech CSE</strong>
+                  <span>Computer Science Engineering</span>
+                </div>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-icon">💻</span>
+                <div>
+                  <strong>Software Dev</strong>
+                  <span>Clean & scalable code</span>
+                </div>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-icon">🌐</span>
+                <div>
+                  <strong>Web Dev</strong>
+                  <span>Responsive applications</span>
+                </div>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-icon">🧠</span>
+                <div>
+                  <strong>DSA</strong>
+                  <span>Problem solving</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right — text -->
+          <div class="about-right reveal">
+            <h3 class="about-subtitle">Building Software, One Line at a Time</h3>
+            <p class="about-text">
+              I'm a Computer Science Engineering student with a strong interest in software development
+              and web technologies. I enjoy turning complex problems into clean, elegant solutions
+              and am constantly pushing myself to learn new tools and techniques.
+            </p>
+            <p class="about-text">
+              My journey in tech is driven by curiosity — whether it's understanding how algorithms
+              work under the hood, designing intuitive user interfaces, or architecting backend
+              systems. I love the entire process of building software from scratch.
+            </p>
+            <p class="about-text">
+              When I'm not coding, I'm sharpening my problem-solving skills on competitive programming
+              platforms and exploring the latest trends in software engineering.
+            </p>
+
+            <!-- Interests -->
+            <div class="about-interests">
+              <h4>What I'm interested in</h4>
+              <div class="interest-tags">
+                <span class="interest-tag">Software Development</span>
+                <span class="interest-tag">Web Development</span>
+                <span class="interest-tag">Problem Solving</span>
+                <span class="interest-tag">Data Structures & Algorithms</span>
+                <span class="interest-tag">Building Projects</span>
+                <span class="interest-tag">Open Source</span>
+              </div>
+            </div>
+
+            <!-- Currently Learning -->
+            <div class="currently-learning">
+              <h4>
+                <span class="learning-dot" aria-hidden="true"></span>
+                Currently Learning
+              </h4>
+              <div class="learning-items">
+                <div class="learning-item">
+                  <span class="learning-icon">⚛️</span>
+                  <span>Advanced React & State Management</span>
+                </div>
+                <div class="learning-item">
+                  <span class="learning-icon">🔧</span>
+                  <span>Node.js & RESTful APIs</span>
+                </div>
+                <div class="learning-item">
+                  <span class="learning-icon">📊</span>
+                  <span>System Design Fundamentals</span>
+                </div>
+                <div class="learning-item">
+                  <span class="learning-icon">🗄️</span>
+                  <span>Database Design & Optimization</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SKILLS SECTION
+         ============================================= -->
+    <section class="skills section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-tag">My Toolkit</span>
+          <h2 class="section-title" id="skills-heading">Skills &amp; Technologies</h2>
+          <p class="section-subtitle">Technologies I've worked with and tools I use daily</p>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Programming Languages -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <span class="skill-category-icon">⌨️</span>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-cards">
+              <div class="skill-card" data-level="90">
+                <span class="skill-name">C</span>
+                <div class="skill-bar"><div class="skill-fill" style="--fill: 85%"></div></div>
+              </div>
+              <div class="skill-card" data-level="88">
+                <span class="skill-name">C++</span>
+                <div class="skill-bar"><div class="skill-fill" style="--fill: 88%"></div></div>
+              </div>
+              <div class="skill-card" data-level="85">
+                <span class="skill-name">Java</span>
+                <div class="skill-bar"><div class="skill-fill" style="--fill: 82%"></div></div>
+              </div>
+              <div class="skill-card" data-level="78">
+                <span class="skill-name">Python</span>
+                <div class="skill-bar"><div class="skill-fill" style="--fill: 75%"></div></div>
+              </div>
+              <div class="skill-card" data-level="85">
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar"><div class="skill-fill" style="--fill: 85%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <span class="skill-category-icon">🎨</span>
+              <h3>Frontend</h3>
+            </div>
+            <div class="skill-cards">
+              <div class="skill-card">
+                <span class="skill-name">HTML5</span>
+                <div class="skill-bar"><div class="skill-fill" style="--fill: 92%"></div></div>
+              </div>
+              <div class="skill-card">
+                <span class="skill-name">CSS3</span>
+                <div class="skill-bar"><div class="skill-fill" style="--fill: 88%"></div></div>
+              </div>
+              <div class="skill-card">
+                <span class="skill-name">React</span>
+                <div class="skill-bar"><div class="skill-fill" style="--fill: 75%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <span class="skill-category-icon">⚙️</span>
+              <h3>Backend</h3>
+            </div>
+            <div class="skill-cards">
+              <div class="skill-card">
+                <span class="skill-name">Node.js</span>
+                <div class="skill-bar"><div class="skill-fill" style="--fill: 72%"></div></div>
+              </div>
+              <div class="skill-card">
+                <span class="skill-name">Express.js</span>
+                <div class="skill-bar"><div class="skill-fill" style="--fill: 70%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <span class="skill-category-icon">🗄️</span>
+              <h3>Database</h3>
+            </div>
+            <div class="skill-cards">
+              <div class="skill-card">
+                <span class="skill-name">MySQL</span>
+                <div class="skill-bar"><div class="skill-fill" style="--fill: 80%"></div></div>
+              </div>
+              <div class="skill-card">
+                <span class="skill-name">SQL</span>
+                <div class="skill-bar"><div class="skill-fill" style="--fill: 82%"></div></div>
+              </div>
+              <div class="skill-card">
+                <span class="skill-name">Supabase</span>
+                <div class="skill-bar"><div class="skill-fill" style="--fill: 68%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <span class="skill-category-icon">🛠️</span>
+              <h3>Tools</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge">Git</span>
+              <span class="skill-badge">GitHub</span>
+              <span class="skill-badge">VS Code</span>
+            </div>
+          </div>
+
+          <!-- CS Fundamentals -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <span class="skill-category-icon">📚</span>
+              <h3>CS Fundamentals</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge">Data Structures</span>
+              <span class="skill-badge">Algorithms</span>
+              <span class="skill-badge">OOP</span>
+              <span class="skill-badge">DBMS</span>
+              <span class="skill-badge">Operating Systems</span>
+              <span class="skill-badge">Computer Networks</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         PROJECTS SECTION
+         ============================================= -->
+    <section class="projects section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-tag">My Work</span>
+          <h2 class="section-title" id="projects-heading">Featured Projects</h2>
+          <p class="section-subtitle">A selection of projects I've built — from idea to deployment</p>
+        </div>
+
+        <!-- Filter buttons -->
+        <div class="project-filters reveal" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="javascript">JavaScript</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+
+        <!-- Project cards grid -->
+        <!-- REPLACE: Replace each project card with your actual projects.
+             For each project update:
+             - data-category (web | javascript | fullstack | other)
+             - project-thumb background gradient or replace with <img>
+             - project-name, project-problem, project-solution
+             - tech-tag list
+             - GitHub and Live Demo hrefs                               -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Project 1 -->
+          <article class="project-card reveal" data-category="fullstack">
+            <div class="project-thumb" style="--grad: linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+              <div class="project-thumb-icon">🛒</div>
+              <!-- OR: <img src="assets/projects/project1.png" alt="E-Commerce Platform screenshot" loading="lazy" /> -->
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">Full Stack</div>
+              <h3 class="project-name">E-Commerce Platform</h3>
+              <p class="project-problem">
+                <strong>Problem:</strong> Users needed a seamless online shopping experience with real-time
+                cart management and secure checkout.
+              </p>
+              <p class="project-solution">
+                <strong>Solution:</strong> Built a full-stack e-commerce app with product listing,
+                cart functionality, user authentication, and order management.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">Supabase</span>
+              </div>
+              <div class="project-links">
+                <!-- REPLACE: Update href with your GitHub repo URL -->
+                <a href="https://github.com/kushwahaKhushi/shopsphere" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                  GitHub
+                </a>
+                <!-- REPLACE: Update href with your live demo URL -->
+               <a href="https://shopsphere-smoky.vercel.app/" 
+   class="btn btn-primary" 
+   target="_blank" 
+   rel="noopener noreferrer">
+    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    Live Demo
+</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal" data-category="javascript">
+            <div class="project-thumb" style="--grad: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">
+              <div class="project-thumb-icon">📋</div>
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">JavaScript</div>
+              <h3 class="project-name">Task Manager App</h3>
+              <p class="project-problem">
+                <strong>Problem:</strong> Needed a lightweight productivity tool to manage daily tasks
+                with priority levels and deadline tracking.
+              </p>
+              <p class="project-solution">
+                <strong>Solution:</strong> Developed a vanilla JavaScript task manager with local storage
+                persistence, drag-and-drop sorting, and filter by status.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">LocalStorage</span>
+              </div>
+              <div class="project-links">
+                <!-- REPLACE: Update with your GitHub repo URL -->
+                <a href="https://github.com/khushikushwaha/task-manager" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                  GitHub
+                </a>
+                <!-- REPLACE: Update with your live demo URL -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal" data-category="web">
+            <div class="project-thumb" style="--grad: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)">
+              <div class="project-thumb-icon">🌤️</div>
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">Web</div>
+              <h3 class="project-name">Weather Dashboard</h3>
+              <p class="project-problem">
+                <strong>Problem:</strong> Users wanted a clean, fast weather app with location-based
+                forecasts and a modern interface.
+              </p>
+              <p class="project-solution">
+                <strong>Solution:</strong> Built a responsive weather dashboard consuming OpenWeatherMap
+                API with city search, 5-day forecast, and dynamic backgrounds.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">REST API</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">HTML5</span>
+              </div>
+              <div class="project-links">
+                <!-- REPLACE: Update with your GitHub repo URL -->
+                <a href="https://github.com/khushikushwaha/weather-app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                  GitHub
+                </a>
+                <!-- REPLACE: Update with your live demo URL -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card reveal" data-category="other">
+            <div class="project-thumb" style="--grad: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)">
+              <div class="project-thumb-icon">🔐</div>
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">Other</div>
+              <h3 class="project-name">Student Management System</h3>
+              <p class="project-problem">
+                <strong>Problem:</strong> Educational institutions required an efficient system for
+                managing student records, grades, and attendance.
+              </p>
+              <p class="project-solution">
+                <strong>Solution:</strong> Designed a console-based Student Management System in Java
+                using OOP principles with file-based persistence and CRUD operations.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">OOP</span>
+                <span class="tech-tag">File I/O</span>
+                <span class="tech-tag">DSA</span>
+              </div>
+              <div class="project-links">
+                <!-- REPLACE: Update with your GitHub repo URL -->
+                <a href="https://github.com/khushikushwaha/student-management" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                  GitHub
+                </a>
+                <span class="btn btn-sm btn-disabled" aria-label="No live demo available">Console App</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="projects-cta reveal">
+          <!-- REPLACE: Update href with your GitHub profile URL -->
+          <a href="https://github.com/kushwahaKhushi" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            View All Projects on GitHub
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================
+         EXPERIENCE / LEARNING JOURNEY
+         ============================================= -->
+    <section class="experience section" id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-tag">My Journey</span>
+          <h2 class="section-title" id="experience-heading">Learning &amp; Experience</h2>
+          <p class="section-subtitle">The path that has shaped my skills and perspective</p>
+        </div>
+
+        <div class="timeline">
+
+          <!-- REPLACE: Update timeline items with your actual education, internships, and experiences -->
+<div class="timeline-item reveal">
+  <div class="timeline-dot" aria-hidden="true"></div>
+
+  <div class="timeline-content">
+    <div class="timeline-header">
+      <h3>B.Sc. Mathematics</h3>
+      <span class="timeline-date">2021 — 2025</span>
+    </div>
+
+    <p class="timeline-org">
+      Shri Agrasen Kanya PG College
+    </p>
+
+    <p class="timeline-desc">
+      Completed a B.Sc. in Mathematics with a strong foundation in Mathematics,
+      Physics, and Chemistry. Developed analytical, logical, and problem-solving
+      skills through core science and mathematical concepts.
+      <strong>CGPA: 6.8</strong>
+    </p>
+
+    <div class="timeline-tags">
+      <span>Mathematics</span>
+      <span>Physics</span>
+      <span>Chemistry</span>
+      <span>Problem Solving</span>
+    </div>
+  </div>
+</div>
+          
+          
+          <div class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>B.Tech Computer Science Engineering</h3>
+                <!-- REPLACE: Add your college name and graduation year -->
+                <span class="timeline-date">2024 — 2028</span>
+              </div>
+              <!-- REPLACE: Add your college/university name -->
+              <p class="timeline-org">Ashoka Institute of Technology and Management</p>
+              <p class="timeline-desc">
+                Pursuing a B.Tech degree in Computer Science Engineering, building strong foundations
+                in programming, algorithms, data structures, operating systems, and database management.
+              </p>
+              <div class="timeline-tags">
+                <span>Data Structures</span>
+                <span>Algorithms</span>
+                <span>OOP</span>
+                <span>DBMS</span>
+                <span>OS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Web Development</h3>
+                
+              </div>
+              <p class="timeline-org">Self-Directed Learning</p>
+              <p class="timeline-desc">
+                Mastered HTML, CSS, and JavaScript fundamentals. Built responsive web applications and
+                explored modern frameworks including React. Focused on clean UI and user experience.
+              </p>
+              <div class="timeline-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>React</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Backend Development</h3>
+                
+              </div>
+              <p class="timeline-org">Self-Directed Learning</p>
+              <p class="timeline-desc">
+                Exploring server-side development using Node.js and Express.js. Built RESTful APIs,
+                worked with MongoDB and SQL databases. Studied authentication and authorization patterns.
+              </p>
+              <div class="timeline-tags">
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>MySQL</span>
+                <span>REST APIs</span>
+              </div>
+            </div>
+          </div>
+
+        
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         ACHIEVEMENTS / CERTIFICATIONS
+         ============================================= -->
+    <section class="achievements section" id="achievements" aria-labelledby="achievements-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-tag">Milestones</span>
+          <h2 class="section-title" id="achievements-heading">Achievements &amp; Certifications</h2>
+          <p class="section-subtitle">Recognitions, certifications, and key milestones</p>
+        </div>
+
+        <div class="achievements-grid">
+
+          <!-- ══════════════════════════════════════
+               CARD 1 — CERTIFICATIONS
+               ══════════════════════════════════════ -->
+          <article class="achievement-card reveal">
+            <div class="ac-header">
+              <span class="ac-icon" aria-hidden="true">🏅</span>
+              <span class="ac-type">Certifications</span>
+            </div>
+            <div class="ac-body">
+
+              <!-- Cert 1 -->
+              <div class="ac-entry">
+                <h3 class="ac-title">Implement a data warehouse in Microsoft Fabric</h3>
+                <p class="ac-meta">
+                  <span>Microsoft</span>
+                  <span class="ac-meta-dot" aria-hidden="true">·</span>
+                  <span>May 2025</span>
+                </p>
+                <p class="ac-credential">Credential ID: AB12453957A36912</p>
+                <p class="ac-desc">
+                  Demonstrated practical knowledge of implementing a data warehouse using
+                  Microsoft Fabric, with a focus on data management, SQL, and analytics.
+                </p>
+                <div class="ac-tags">
+                  <span class="ac-tag">Microsoft Fabric</span>
+                  <span class="ac-tag">SQL</span>
+                  <span class="ac-tag">Data Warehouse</span>
+                  <span class="ac-tag">Data Analysis</span>
+                </div>
+              </div>
+
+              <div class="ac-divider" aria-hidden="true"></div>
+
+              <!-- Cert 2 -->
+              <div class="ac-entry">
+                <h3 class="ac-title">Cyber Job Simulation</h3>
+                <p class="ac-meta">
+                  <span>Deloitte</span>
+                  <span class="ac-meta-dot" aria-hidden="true">·</span>
+                  <span>July 2026</span>
+                </p>
+                <p class="ac-desc">
+                  Completed a cybersecurity job simulation focused on cyber risk management,
+                  threat analysis, and incident response.
+                </p>
+                <div class="ac-tags">
+                  <span class="ac-tag">Cybersecurity</span>
+                  <span class="ac-tag">Cyber Risk Management</span>
+                  <span class="ac-tag">Threat Analysis</span>
+                  <span class="ac-tag">Incident Response</span>
+                </div>
+              </div>
+
+              <div class="ac-divider" aria-hidden="true"></div>
+
+              <!-- Cert 3 -->
+              <div class="ac-entry">
+                <h3 class="ac-title">Data Visualisation: Empowering Business with Effective Insights</h3>
+                <p class="ac-meta">
+                  <span>Forage</span>
+                  <span class="ac-meta-dot" aria-hidden="true">·</span>
+                  <span>September 2026</span>
+                </p>
+                <p class="ac-credential">Credential ID: 6a99ba377a967f7b7594120</p>
+                <p class="ac-desc">
+                  Completed a data visualization program developing skills in data analysis
+                  and presenting business insights effectively.
+                </p>
+                <div class="ac-tags">
+                  <span class="ac-tag">Data Analysis</span>
+                  <span class="ac-tag">Data Visualization</span>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- ══════════════════════════════════════
+               CARD 2 — HACKATHONS
+               ══════════════════════════════════════ -->
+          <article class="achievement-card reveal">
+            <div class="ac-header">
+              <span class="ac-icon" aria-hidden="true">🚀</span>
+              <span class="ac-type">Hackathons</span>
+            </div>
+            <div class="ac-body">
+
+              <!-- Hackathon 1 -->
+              <div class="ac-entry">
+                <h3 class="ac-title">Vibe With India – Virtual Hackathon</h3>
+                <p class="ac-meta">
+                  <span>DevnVATE</span>
+                  <span class="ac-meta-dot" aria-hidden="true">·</span>
+                  <span>March 2026</span>
+                </p>
+                <p class="ac-desc">
+                  Participated in the Vibe With India Virtual Hackathon (March 20, 2026),
+                  gaining hands-on experience in problem-solving, teamwork, ideation, and
+                  developing technology-driven solutions.
+                </p>
+                <div class="ac-tags">
+                  <span class="ac-tag">Problem Solving</span>
+                  <span class="ac-tag">Teamwork</span>
+                  <span class="ac-tag">Ideation</span>
+                  <span class="ac-tag">Technology</span>
+                </div>
+              </div>
+
+              <div class="ac-divider" aria-hidden="true"></div>
+
+              <!-- Hackathon 2 — Runner-Up highlight -->
+              <div class="ac-entry">
+                <div class="ac-runner-up" aria-label="Achievement: Runner-Up 2nd Position">
+                  🥈 Runner-Up &mdash; 2nd Position
+                </div>
+                <h3 class="ac-title">Techकृति 2.0 – Hackathon</h3>
+                <p class="ac-meta">
+                  <span>Kashi Institute of Technology</span>
+                  <span class="ac-meta-dot" aria-hidden="true">·</span>
+                  <span>December 2025</span>
+                </p>
+                <p class="ac-desc">
+                  Achieved Runner-Up (2nd Position) at Techकृति 2.0, the annual tech fest
+                  of Kashi Institute of Technology (December 5–6, 2025). Contributed to
+                  developing a technology-driven solution demonstrating innovation and
+                  collaborative skills.
+                </p>
+                <div class="ac-tags">
+                  <span class="ac-tag">Problem Solving</span>
+                  <span class="ac-tag">Innovation</span>
+                  <span class="ac-tag">Collaboration</span>
+                  <span class="ac-tag">Teamwork</span>
+                </div>
+              </div>
+
+              <div class="ac-divider" aria-hidden="true"></div>
+
+              <!-- Hackathon 3 -->
+              <div class="ac-entry">
+                <h3 class="ac-title">Smart India Hackathon (SIH) 2025 – Internal Hackathon</h3>
+                <p class="ac-meta">
+                  <span>Ashoka Institute of Technology &amp; Management, Varanasi</span>
+                  <span class="ac-meta-dot" aria-hidden="true">·</span>
+                  <span>September 2025</span>
+                </p>
+                <p class="ac-desc">
+                  Participated in the Internal Hackathon for Smart India Hackathon (SIH) 2025,
+                  demonstrating problem-solving, teamwork, innovation, and technical skills.
+                </p>
+                <div class="ac-tags">
+                  <span class="ac-tag">Problem Solving</span>
+                  <span class="ac-tag">Teamwork</span>
+                  <span class="ac-tag">Innovation</span>
+                  <span class="ac-tag">Technical Skills</span>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- ══════════════════════════════════════
+               CARD 3 — INTERNSHIP / TRAINING
+               ══════════════════════════════════════ -->
+          <article class="achievement-card reveal">
+            <div class="ac-header">
+              <span class="ac-icon" aria-hidden="true">💼</span>
+              <span class="ac-type">Internship / Training</span>
+            </div>
+            <div class="ac-body">
+
+              <div class="ac-entry">
+                <h3 class="ac-title">Full Stack Development Intern</h3>
+                <p class="ac-meta">
+                  <span>Thiranex</span>
+                  <span class="ac-meta-dot" aria-hidden="true">·</span>
+                  <span>30 Days – Present</span>
+                </p>
+                <p class="ac-meta" style="margin-top:0.1rem;">
+                  <span class="ac-work-mode">📍 Remote / Project-Based</span>
+                </p>
+                <p class="ac-desc">
+                  Selected for a project-based Full Stack Development internship through
+                  Thiranex's selection process.
+                </p>
+                <ul class="ac-list">
+                  <li>Working on practical development tasks under industry mentorship.</li>
+                  <li>Applying full-stack web development concepts to real project requirements.</li>
+                  <li>Building hands-on experience with implementation and iterative development.</li>
+                  <li>Developing understanding of industry-oriented software development workflows.</li>
+                </ul>
+                <div class="ac-tags">
+                  <span class="ac-tag">Full Stack Development</span>
+                  <span class="ac-tag">Web Development</span>
+                  <span class="ac-tag">JavaScript</span>
+                  <span class="ac-tag">Frontend Development</span>
+                  <span class="ac-tag">Backend Development</span>
+                  <span class="ac-tag">Project Development</span>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         GITHUB / CODING SECTION
+         ============================================= -->
+    <section class="github-section section" id="github" aria-labelledby="github-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-tag">Open Source</span>
+          <h2 class="section-title" id="github-heading">My GitHub &amp; Code</h2>
+          <p class="section-subtitle">Explore my repositories and open-source contributions</p>
+        </div>
+
+        <div class="github-grid">
+
+          <!-- GitHub profile card -->
+          <div class="github-profile-card reveal">
+            <div class="github-avatar-area">
+              <div class="github-avatar">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </div>
+              <!-- REPLACE: Update with your GitHub username -->
+              <p class="github-username">@khushikushwaha</p>
+            </div>
+            <p class="github-bio">
+              Building projects, solving problems, and contributing to open source.
+              Check out my repositories below.
+            </p>
+            <div class="github-stats" id="githubStats">
+              <!-- Populated by JS via GitHub API (no auth required for public data) -->
+              <div class="github-stat">
+                <strong id="repoCount">—</strong>
+                <span>Public Repos</span>
+              </div>
+              <div class="github-stat">
+                <strong id="followerCount">—</strong>
+                <span>Followers</span>
+              </div>
+              <div class="github-stat">
+                <strong id="followingCount">—</strong>
+                <span>Following</span>
+              </div>
+            </div>
+            <!-- REPLACE: Update href with your GitHub profile URL -->
+            <a href="https://github.com/kushwahaKhushi" target="_blank" rel="noopener noreferrer" class="btn btn-primary github-cta">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:18px;height:18px;"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              Explore My Code
+            </a>
+          </div>
+
+          <!-- Contribution visual -->
+          <div class="github-contrib-card reveal">
+            <h3>Contribution Activity</h3>
+            <div class="contrib-grid" id="contribGrid" aria-label="GitHub contribution graph placeholder">
+              <!-- Populated by JS with random green cells for visual effect -->
+            </div>
+            <div class="contrib-legend" aria-hidden="true">
+              <span>Less</span>
+              <span class="legend-cell level-0"></span>
+              <span class="legend-cell level-1"></span>
+              <span class="legend-cell level-2"></span>
+              <span class="legend-cell level-3"></span>
+              <span class="legend-cell level-4"></span>
+              <span>More</span>
+            </div>
+            <p class="contrib-note">* Decorative visualization — view live contributions on GitHub</p>
+          </div>
+
+          <!-- Languages / focus areas -->
+          <div class="github-langs-card reveal">
+            <h3>Focus Areas</h3>
+            <div class="lang-bars">
+              <div class="lang-bar-item">
+                <div class="lang-bar-header">
+                  <span>JavaScript</span><span>30%</span>
+                </div>
+                <div class="lang-bar-track"><div class="lang-bar-fill" style="--w:30%;--c:#f7df1e"></div></div>
+              </div>
+              <div class="lang-bar-item">
+                <div class="lang-bar-header">
+                  <span>Java</span><span>25%</span>
+                </div>
+                <div class="lang-bar-track"><div class="lang-bar-fill" style="--w:25%;--c:#b07219"></div></div>
+              </div>
+              <div class="lang-bar-item">
+                <div class="lang-bar-header">
+                  <span>C++</span><span>20%</span>
+                </div>
+                <div class="lang-bar-track"><div class="lang-bar-fill" style="--w:20%;--c:#f34b7d"></div></div>
+              </div>
+              <div class="lang-bar-item">
+                <div class="lang-bar-header">
+                  <span>Python</span><span>15%</span>
+                </div>
+                <div class="lang-bar-track"><div class="lang-bar-fill" style="--w:15%;--c:#3572A5"></div></div>
+              </div>
+              <div class="lang-bar-item">
+                <div class="lang-bar-header">
+                  <span>CSS / HTML</span><span>10%</span>
+                </div>
+                <div class="lang-bar-track"><div class="lang-bar-fill" style="--w:10%;--c:#e34c26"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         RESUME SECTION
+         ============================================= -->
+    <section class="resume-section section" id="resume" aria-labelledby="resume-heading">
+      <div class="container">
+        <div class="resume-cta-box reveal">
+          <div class="resume-cta-content">
+            <span class="section-tag">Resume</span>
+            <h2 id="resume-heading">Want to know more about my journey?</h2>
+            <p>
+              Download my resume to explore my skills, projects, education and experience in detail.
+              Available in PDF format — ready to share with recruiters and teams.
+            </p>
+            <div class="resume-actions">
+              <!-- =============================================
+                   RESUME BUTTON — RESUME SECTION
+                   Place your resume PDF at: assets/resume.pdf
+                   The file opens in a new browser tab.
+                   ============================================= -->
+              <a href="./assets/resume.pdf"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn btn-primary"
+                 aria-label="Open Resume PDF in a new tab">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                Download Resume
+              </a>
+              <!-- REPLACE: Update href with your LinkedIn URL -->
+              <a href="https://www.linkedin.com/in/khushi-kushwaha" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                View LinkedIn Profile
+              </a>
+            </div>
+          </div>
+          <div class="resume-illustration" aria-hidden="true">
+            <div class="resume-doc">
+              <div class="resume-line w-60"></div>
+              <div class="resume-line w-40"></div>
+              <div class="resume-divider"></div>
+              <div class="resume-line w-80"></div>
+              <div class="resume-line w-70"></div>
+              <div class="resume-line w-50"></div>
+              <div class="resume-divider"></div>
+              <div class="resume-line w-90"></div>
+              <div class="resume-line w-60"></div>
+              <div class="resume-line w-75"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         CONTACT SECTION
+         ============================================= -->
+    <section class="contact section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title" id="contact-heading">Let's Work Together</h2>
+          <p class="section-subtitle">
+            I'm currently open to internships, collaborations, and entry-level opportunities.
+            Feel free to reach out!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Contact info -->
+          <div class="contact-info reveal">
+            <h3>Contact Information</h3>
+            <p class="contact-intro">
+              Whether you have a project idea, an opportunity, or just want to say hello —
+              my inbox is always open.
+            </p>
+
+            <ul class="contact-list" role="list">
+              <li class="contact-item">
+                <div class="contact-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <strong>Email</strong>
+                  <!-- REPLACE: Update with your email address -->
+                  <a href="mailto:kushwahakhushi0512@gmail.com">kushwahakhushi0512@gmail.com</a>
+                </div>
+              </li>
+              <li class="contact-item">
+                <div class="contact-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                </div>
+                <div>
+                  <strong>GitHub</strong>
+                  <!-- REPLACE: Update with your GitHub URL and username -->
+                  <a href="https://github.com/kushwahaKhushi" target="_blank" rel="noopener noreferrer">github.com/khushikushwaha</a>
+                </div>
+              </li>
+              <li class="contact-item">
+                <div class="contact-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </div>
+                <div>
+                  <strong>LinkedIn</strong>
+                  <!-- REPLACE: Update with your LinkedIn URL and profile name -->
+                  <a href="https://www.linkedin.com/in/khushi-kushwaha" target="_blank" rel="noopener noreferrer">linkedin.com/in/khushikushwaha</a>
+                </div>
+              </li>
+              <li class="contact-item">
+                <div class="contact-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <strong>Location</strong>
+                  <!-- REPLACE: Update with your city/state -->
+                  <span>India</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="availability-badge">
+              <span class="avail-dot" aria-hidden="true"></span>
+              Available for internships &amp; opportunities
+            </div>
+          </div>
+
+          <!-- Contact form -->
+          <div class="contact-form-wrap reveal">
+            <h3>Send a Message</h3>
+            <!--
+              FORMSPREE SETUP:
+              1. Go to https://formspree.io and create a free account
+              2. Create a new form and get your endpoint URL
+              3. Replace the action attribute value below with your Formspree endpoint
+              4. Example: action="https://formspree.io/f/xabcdefg"
+
+              MAILTO FALLBACK:
+              If you prefer mailto, the JS will handle it when no Formspree endpoint is set.
+            -->
+            <form
+              class="contact-form"
+              id="contactForm"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              novalidate
+              aria-label="Contact form"
+            >
+              <!-- REPLACE: Update formspree action URL above -->
+
+              <div class="form-group">
+                <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your full name"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                />
+                <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="your.email@example.com"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                />
+                <span class="form-error" id="emailError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="What is this about?"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message <span aria-hidden="true">*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Write your message here..."
+                  required
+                  aria-required="true"
+                ></textarea>
+                <span class="form-error" id="messageError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                <span id="submitText">Send Message</span>
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+
+              <div class="form-success" id="formSuccess" role="status" aria-live="polite" style="display:none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Message sent successfully! I'll get back to you soon.
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =============================================
+       FOOTER
+       ============================================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo" aria-label="Back to top">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-name">KK</span>
+            <span class="logo-bracket">/&gt;</span>
+          </a>
+          <p class="footer-tagline">
+            <strong>Khushi Kushwaha</strong><br />
+            B.Tech CSE Student | Aspiring Software Developer
+          </p>
+          <p class="footer-built">
+            Designed &amp; Built with HTML, CSS &amp; JavaScript
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul role="list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Journey</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Find Me On</h4>
+          <div class="footer-social-links">
+            <!-- REPLACE: Update with your GitHub URL -->
+            <a href="https://github.com/kushwahaKhushi" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              GitHub
+            </a>
+            <!-- REPLACE: Update with your LinkedIn URL -->
+            <a href="https://www.linkedin.com/in/khushi-kushwaha" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <!-- REPLACE: Update with your email -->
+            <a href="mailto:kushwahakhushi0512@gmail.com" class="footer-social-link" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="currentYear"></span> Khushi Kushwaha. All rights reserved.
+        </p>
+        <p>Made with Khushi Kushwaha</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Scroll back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
