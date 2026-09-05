@@ -1166,6 +1166,7 @@ body.light-theme .code-window {
               transform var(--transition), opacity 0.4s ease;
   display: flex;
   flex-direction: column;
+  position: relative;   /* establishes stacking context for children */
 }
 
 .project-card:hover {
@@ -1179,7 +1180,7 @@ body.light-theme .code-window {
   display: none;
 }
 
-/* Thumbnail */
+/* Thumbnail — decorative only, never receives clicks */
 .project-thumb {
   height: 160px;
   background: var(--grad);
@@ -1188,6 +1189,7 @@ body.light-theme .code-window {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  pointer-events: none;   /* prevent thumb from intercepting clicks */
 }
 
 .project-thumb img {
@@ -1208,6 +1210,8 @@ body.light-theme .code-window {
   flex-direction: column;
   gap: 0.75rem;
   flex: 1;
+  position: relative;   /* sit above any transformed card layer */
+  z-index: 1;
 }
 
 .project-category-tag {
@@ -1259,6 +1263,16 @@ body.light-theme .code-window {
   flex-wrap: wrap;
   padding-top: 0.25rem;
   border-top: 1px solid var(--clr-border);
+  position: relative;       /* ensure links are never buried under a sibling layer */
+  z-index: 10;              /* sit on top of any transformed card surface */
+  pointer-events: auto;     /* explicitly allow all pointer events */
+}
+
+/* Guarantee every anchor inside .project-links is always clickable */
+.project-links a {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
 }
 
 .projects-cta {
